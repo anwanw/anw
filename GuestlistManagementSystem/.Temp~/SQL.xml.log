@@ -1,0 +1,59 @@
+[24 IV 2011 17:06:18] DEBUG Executing SQL script
+[24 IV 2011 17:06:18] INFO ================================================================================
+[24 IV 2011 17:06:18] INFO outputPath= 'C:\Documents and Settings\ubuntak\Plocha\gg\GuestlistManagementSystem\.Temp~\SQL.xml'
+[24 IV 2011 17:06:18] INFO onError= 'abort'
+[24 IV 2011 17:06:18] INFO statementSeparator= ';'
+[24 IV 2011 17:06:18] INFO derby.system.home= 'C:\Documents and Settings\ubuntak\Plocha\gg\.metadata\.plugins\com.webratio.commons.db\derby'
+[24 IV 2011 17:06:18] INFO password= 'user'
+[24 IV 2011 17:06:18] INFO url= 'jdbc:derby://localhost:1527/Test2;create=true'
+[24 IV 2011 17:06:18] INFO username= 'user'
+[24 IV 2011 17:06:18] INFO autoCommit= 'false'
+[24 IV 2011 17:06:18] INFO outputLogPath= 'C:\Documents and Settings\ubuntak\Plocha\gg\GuestlistManagementSystem\.Temp~\SQL.xml.log'
+[24 IV 2011 17:06:18] INFO driverClass= 'org.apache.derby.jdbc.ClientDriver'
+[24 IV 2011 17:06:18] INFO encoding= ''
+[24 IV 2011 17:06:18] INFO eventSocketPort= '1435'
+[24 IV 2011 17:06:18] INFO sqlScript= 'C:\Documents and Settings\ubuntak\Plocha\gg\GuestlistManagementSystem\DBScripts\SQL_script_110420_221506.sql'
+[24 IV 2011 17:06:18] INFO ================================================================================
+[24 IV 2011 17:06:18] INFO Connecting to the Database...
+[24 IV 2011 17:06:19] INFO Database connection estabilished
+[24 IV 2011 17:06:19] INFO transaction isolation: 2
+[24 IV 2011 17:06:19] DEBUG ================================================================================
+[24 IV 2011 17:06:19] DEBUG Executing SQL script file: C:\Documents and Settings\ubuntak\Plocha\gg\GuestlistManagementSystem\DBScripts\SQL_script_110420_221506.sql
+[24 IV 2011 17:06:19] DEBUG Executing statement:  create table "APP"."USER" ( "OID"  integer  not null, "USERNAME"  varchar(255), "PASSWORD"  varchar(255), "EMAIL"  varchar(255), primary key ("OID") )
+[24 IV 2011 17:06:19] DEBUG Executing statement:    create table "APP"."GROUP" ( "OID"  integer  not null, "GROUPNAME"  varchar(255), primary key ("OID") )
+[24 IV 2011 17:06:19] DEBUG Executing statement:    create table "APP"."MODULE" ( "OID"  integer  not null, "MODULEID"  varchar(255), "MODULENAME"  varchar(255), primary key ("OID") )
+[24 IV 2011 17:06:19] DEBUG Executing statement:    create table "APP"."ACCOUNT" ( "OID"  integer  not null, "ADDRESSLINE1"  varchar(255), "ADDRESSLINE2"  varchar(255), "CITY"  varchar(255), "COUNTRY"  varchar(255), "ZIP"  varchar(255), "PHONE"  varchar(255), "COMPANYNAME"  varchar(255), primary key ("OID") )
+[24 IV 2011 17:06:19] DEBUG Executing statement:    create table "APP"."SETTINGS" ( "OID"  integer  not null, "LANGUAGE"  varchar(255), primary key ("OID") )
+[24 IV 2011 17:06:19] DEBUG Executing statement:    create table "APP"."EVENT" ( "OID"  integer  not null, "NAME"  varchar(255), "DATE"  date, "LOCATION"  varchar(255), primary key ("OID") )
+[24 IV 2011 17:06:19] DEBUG Executing statement:    create table "APP"."GUESTLIST" ( "OID"  integer  not null, "NAME"  varchar(255), primary key ("OID") )
+[24 IV 2011 17:06:19] DEBUG Executing statement:    create table "APP"."INVITATION" ( "OID"  integer  not null, "FIRSTNAME"  varchar(255), "LASTNAME"  varchar(255), "NOTE"  varchar(255), "ISCHECKEDIN"  smallint, "CHECKINDATE"  date, "ACCOMPANIEDBY"  integer, primary key ("OID") )
+[24 IV 2011 17:06:20] DEBUG Executing statement:    create table "APP"."PERMANENTGUESTLIST" ( "OID"  integer  not null, "NAME"  varchar(255), primary key ("OID") )
+[24 IV 2011 17:06:20] DEBUG Executing statement:    create table "APP"."PERMANENTINVITATION" ( "OID"  integer  not null, "FIRSTNAME"  varchar(255), "LASTNAME"  varchar(255), "NOTE"  varchar(255), "ISCHECKEDIN"  smallint, "CHECKINDATE"  date, "ACCOMPANIEDBY"  integer, primary key ("OID") )
+[24 IV 2011 17:06:20] DEBUG Executing statement:    create table "APP"."USER_GROUP" ( "USER_OID"  integer not null, "GROUP_OID"  integer not null, primary key ("USER_OID", "GROUP_OID") )
+[24 IV 2011 17:06:20] DEBUG Executing statement:  alter table "APP"."USER_GROUP"   add constraint FK_USER_GROUP_USER foreign key ("USER_OID") references "APP"."USER" ("OID")
+[24 IV 2011 17:06:20] DEBUG Executing statement:  alter table "APP"."USER_GROUP"   add constraint FK_USER_GROUP_GROUP foreign key ("GROUP_OID") references "APP"."GROUP" ("OID")
+[24 IV 2011 17:06:20] DEBUG Executing statement:    alter table "APP"."USER"  ADD COLUMN  "GROUP_OID"  integer
+[24 IV 2011 17:06:20] DEBUG Executing statement:  alter table "APP"."USER"   add constraint FK_GROUP foreign key ("GROUP_OID") references "APP"."GROUP" ("OID")
+[24 IV 2011 17:06:20] DEBUG Executing statement:    alter table "APP"."GROUP"  ADD COLUMN  "MODULE_OID"  integer
+[24 IV 2011 17:06:20] DEBUG Executing statement:  alter table "APP"."GROUP"   add constraint FK_MODULE foreign key ("MODULE_OID") references "APP"."MODULE" ("OID")
+[24 IV 2011 17:06:20] DEBUG Executing statement:    create table "APP"."GROUP_MODULE" ( "GROUP_OID"  integer not null, "MODULE_OID"  integer not null, primary key ("GROUP_OID", "MODULE_OID") )
+[24 IV 2011 17:06:21] DEBUG Executing statement:  alter table "APP"."GROUP_MODULE"   add constraint FK_GROUP_MODULE_GROUP foreign key ("GROUP_OID") references "APP"."GROUP" ("OID")
+[24 IV 2011 17:06:21] DEBUG Executing statement:  alter table "APP"."GROUP_MODULE"   add constraint FK_GROUP_MODULE_MODULE foreign key ("MODULE_OID") references "APP"."MODULE" ("OID")
+[24 IV 2011 17:06:21] DEBUG Executing statement:    alter table "APP"."ACCOUNT"  ADD COLUMN  "USER_OID"  integer
+[24 IV 2011 17:06:21] DEBUG Executing statement:  alter table "APP"."ACCOUNT"   add constraint FK_USER foreign key ("USER_OID") references "APP"."USER" ("OID")
+[24 IV 2011 17:06:21] DEBUG Executing statement:    alter table "APP"."SETTINGS"  ADD COLUMN  "ACCOUNT_OID"  integer
+[24 IV 2011 17:06:21] DEBUG Executing statement:  alter table "APP"."SETTINGS"   add constraint FK_ACCOUNT foreign key ("ACCOUNT_OID") references "APP"."ACCOUNT" ("OID")
+[24 IV 2011 17:06:21] DEBUG Executing statement:    alter table "APP"."GUESTLIST"  ADD COLUMN  "EVENT_OID"  integer
+[24 IV 2011 17:06:21] DEBUG Executing statement:  alter table "APP"."GUESTLIST"   add constraint FK_EVENT foreign key ("EVENT_OID") references "APP"."EVENT" ("OID")
+[24 IV 2011 17:06:21] DEBUG Executing statement:    alter table "APP"."INVITATION"  ADD COLUMN  "GUESTLIST_OID"  integer
+[24 IV 2011 17:06:21] DEBUG Executing statement:  alter table "APP"."INVITATION"   add constraint FK_GUESTLIST foreign key ("GUESTLIST_OID") references "APP"."GUESTLIST" ("OID")
+[24 IV 2011 17:06:21] DEBUG Executing statement:    alter table "APP"."PERMANENTINVITATION"  ADD COLUMN  "PERMANENTGUESTLIST_OID"  integer
+[24 IV 2011 17:06:21] DEBUG Executing statement:  alter table "APP"."PERMANENTINVITATION"   add constraint FK_PERMANENTGUESTLIST foreign key ("PERMANENTGUESTLIST_OID") references "APP"."PERMANENTGUESTLIST" ("OID")
+[24 IV 2011 17:06:21] DEBUG Executing statement:    alter table "APP"."EVENT"  ADD COLUMN  "USER_OID"  integer
+[24 IV 2011 17:06:21] DEBUG Executing statement:  alter table "APP"."EVENT"   add constraint FK_USER_2 foreign key ("USER_OID") references "APP"."USER" ("OID")
+[24 IV 2011 17:06:21] DEBUG Executing statement:    alter table "APP"."PERMANENTGUESTLIST"  ADD COLUMN  "USER_OID"  integer
+[24 IV 2011 17:06:21] DEBUG Executing statement:  alter table "APP"."PERMANENTGUESTLIST"   add constraint FK_USER_3 foreign key ("USER_OID") references "APP"."USER" ("OID")
+[24 IV 2011 17:06:21] DEBUG ================================================================================
+[24 IV 2011 17:06:21] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[24 IV 2011 17:06:21] INFO Database connection closed
+[24 IV 2011 17:06:21] DEBUG Total time: 4807 milliseconds

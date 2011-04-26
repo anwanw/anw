@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?webml version="4.1.2"?>
+
+<WebProject xmlns:gr="http://www.webratio.com/2006/WebML/Graph" outputPath="${webapps_loc}/${project_name}" gr:showUnitContent="true" gr:showTooltip="true" httpPort="8080" httpsPort="8443" jobGroupName="WEBRATIO" sample="true" useAbsoluteURL="false" useDefaultURLEncoding="false">
+  <ServiceDataProviders/>
+  <DeploymentPlan id="dpp2" name="DeploymentPlan 2" taskOrder="dpp2#dpt5 dpp2#dpt6 dpp2#dpt7 dpp2#dpt8">
+    <DeploymentTask id="dpp2#dpt5" type="Clear Deployment Folder"/>
+    <DeploymentTask id="dpp2#dpt6" type="Generate Full Web Project"/>
+    <DeploymentTask id="dpp2#dpt7" type="JAR Descriptor Folder"/>
+    <DeploymentTask id="dpp2#dpt8" type="WAR" fileName="${project_name}.war" deleteDeploymentFolder="true"/>
+  </DeploymentPlan>
+</WebProject>

@@ -1,0 +1,47 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page1" name="User" gr:x="370" gr:y="16" protected="false">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#page1#mssu3" name="Multi Message Unit3" linkOrder="sv1#page1#mssu3#ln3">
+      <Message xml:space="preserve">Ahoj prihlaseny uzivateli</Message>
+      <Link id="sv1#page1#mssu3#ln3" name="New event" to="sv1#page2" automaticCoupling="true" type="normal" validate="true"/>
+    </MultiMessageUnit>
+    <IndexUnit gr:x="252" gr:y="4" id="sv1#page1#inu1" name="Event list" entity="ent3" displayAttributes="ent3#att15 ent3#att12" linkOrder="sv1#page1#inu1#ln19" distinct="true">
+      <Selector id="sv1#page1#inu1#su1" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#page1#inu1#su1#rcond1" name="RoleCondition1" predicate="in" implied="false" role="rel8#role16"/>
+      </Selector>
+      <SortAttribute attribute="ent3#att16" order="descending"/>
+      <Link id="sv1#page1#inu1#ln19" name="ViewEventDetail" to="sv1#page7#dau2" type="normal" automaticCoupling="true" validate="true"/>
+    </IndexUnit>
+    <GetUnit gr:x="140" gr:y="3" id="sv1#page1#gtu1" name="GetUnit1" contextParameters="UserCtxParam">
+      <Link id="sv1#page1#gtu1#ln8" name="Link8" to="sv1#page1#seu1" automaticCoupling="true" type="transport" validate="true"/>
+    </GetUnit>
+    <SelectorUnit gr:x="135" gr:y="106" id="sv1#page1#seu1" name="SelectorUnit1" entity="User">
+      <Selector id="sv1#page1#seu1#su2" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#page1#seu1#su2#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv1#page1#seu1#ln9" name="Link9" to="sv1#page1#inu1" automaticCoupling="true" type="transport" validate="true"/>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv1#page1#mssu3">
+          <layout:Link link="sv1#page1#mssu3#ln3"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell>
+        <layout:Unit unitId="sv1#page1#inu1" label="Event list" manualAttributes="true" manualAttributeOrder="ent3#att15">
+          <layout:Attribute attribute="ent3#att15"/>
+          <layout:Link link="sv1#page1#inu1#ln19"/>
+        </layout:Unit>
+      </layout:Cell>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

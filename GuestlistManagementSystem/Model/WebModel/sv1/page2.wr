@@ -1,0 +1,38 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page2" name="NewEvent" gr:x="393" gr:y="137">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv1#page2#enu1" name="EntryUnit1" linkOrder="sv1#page2#enu1#ln5" fieldOrder="sv1#page2#enu1#fld5 sv1#page2#enu1#fld2 sv1#page2#enu1#fld1">
+      <Field id="sv1#page2#enu1#fld1" name="date" type="date" modifiable="true"/>
+      <Field id="sv1#page2#enu1#fld2" name="location" type="string" modifiable="true"/>
+      <Field id="sv1#page2#enu1#fld5" name="name" type="string" modifiable="true"/>
+      <Link id="sv1#page2#enu1#ln5" name="Link5" to="sv1#cru2" type="normal" validate="true">
+        <LinkParameter id="sv1#page2#enu1#ln5#par5" name="date_Date" source="sv1#page2#enu1#fld1" target="sv1#cru2.ent3#att16"/>
+        <LinkParameter id="sv1#page2#enu1#ln5#par6" name="location_Location" source="sv1#page2#enu1#fld2" target="sv1#cru2.ent3#att17"/>
+        <LinkParameter id="sv1#page2#enu1#ln5#par7" name="name_Name" source="sv1#page2#enu1#fld5" target="sv1#cru2.ent3#att15"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv1#page2#enu1">
+          <layout:Link link="sv1#page2#enu1#ln5"/>
+          <layout:Field field="sv1#page2#enu1#fld5"/>
+          <layout:Field field="sv1#page2#enu1#fld2"/>
+          <layout:Field field="sv1#page2#enu1#fld1"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

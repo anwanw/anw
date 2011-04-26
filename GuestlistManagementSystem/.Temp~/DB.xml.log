@@ -1,0 +1,162 @@
+[25 IV 2011 18:32:43] Building database metadata model
+[25 IV 2011 18:32:43] Properties: {partialRefresh=false, processColumnsUsingSelect=, outputPath=C:\Documents and Settings\ubuntak\Plocha\gg\GuestlistManagementSystem\.Temp~\DB.xml, schemaRegex=null, readProcedures=null, includeViews=true, derby.system.home=C:\Documents and Settings\ubuntak\Plocha\gg\.metadata\.plugins\com.webratio.commons.db\derby, includePrimaryKeys=true, url=jdbc:derby://localhost:1527/Test2;create=true, eventSocketClient=com.webratio.commons.net.EventSocketClient@1742700, includeTables=true, username=user, tableRegex=null, outputLogPath=C:\Documents and Settings\ubuntak\Plocha\gg\GuestlistManagementSystem\.Temp~\DB.xml.log, includeForeignKeys=true, retrieveAllNames=false, readIndexes=null, driverClass=org.apache.derby.jdbc.ClientDriver, tablesToRefresh=, eventSocketPort=1546, includeSynonyms=true, metaDataProviderClass=com.webratio.commons.db.metadata.DerbyMetaDataProvider}
+[25 IV 2011 18:32:43] URL: jdbc:derby://localhost:1527/Test2;create=true
+[25 IV 2011 18:32:43] Product name: Apache Derby
+[25 IV 2011 18:32:43] Product version: 10.4.2.0 - (689064)
+[25 IV 2011 18:32:43] Driver name: Apache Derby Network Client JDBC Driver
+[25 IV 2011 18:32:43] Driver version: 10.4.2.0 - (689064)
+[25 IV 2011 18:32:43] Driver major version: 10
+[25 IV 2011 18:32:43] Driver minor version: 4
+[25 IV 2011 18:32:43] Identifier quote string: 4
+[25 IV 2011 18:32:44] Retrieving schemas
+[25 IV 2011 18:32:44]   Found schema: APP
+[25 IV 2011 18:32:44]   Found schema: NULLID
+[25 IV 2011 18:32:44]   Found schema: SQLJ
+[25 IV 2011 18:32:44]   Found schema: SYS
+[25 IV 2011 18:32:44]   Found schema: SYSCAT
+[25 IV 2011 18:32:44]   Found schema: SYSCS_DIAG
+[25 IV 2011 18:32:44]   Found schema: SYSCS_UTIL
+[25 IV 2011 18:32:44]   Found schema: SYSFUN
+[25 IV 2011 18:32:44]   Found schema: SYSIBM
+[25 IV 2011 18:32:44]   Found schema: SYSPROC
+[25 IV 2011 18:32:44]   Found schema: SYSSTAT
+[25 IV 2011 18:32:44] Retrieving [TABLE, VIEW, SYNONYM] for schema 'APP'
+[25 IV 2011 18:32:44]   Found 'ACCOUNT' [type = TABLE]
+[25 IV 2011 18:32:44]   Found 'EVENT' [type = TABLE]
+[25 IV 2011 18:32:44]   Found 'GROUP' [type = TABLE]
+[25 IV 2011 18:32:44]   Found 'GROUP_MODULE' [type = TABLE]
+[25 IV 2011 18:32:44]   Found 'GUESTLIST' [type = TABLE]
+[25 IV 2011 18:32:44]   Found 'INVITATION' [type = TABLE]
+[25 IV 2011 18:32:44]   Found 'MODULE' [type = TABLE]
+[25 IV 2011 18:32:44]   Found 'PERMANENTGUESTLIST' [type = TABLE]
+[25 IV 2011 18:32:44]   Found 'PERMANENTINVITATION' [type = TABLE]
+[25 IV 2011 18:32:44]   Found 'SETTINGS' [type = TABLE]
+[25 IV 2011 18:32:44]   Found 'USER' [type = TABLE]
+[25 IV 2011 18:32:44]   Found 'USER_GROUP' [type = TABLE]
+[25 IV 2011 18:32:44] Retrieving [TABLE, VIEW, SYNONYM] for schema 'NULLID'
+[25 IV 2011 18:32:44] Retrieving [TABLE, VIEW, SYNONYM] for schema 'SQLJ'
+[25 IV 2011 18:32:44] Retrieving [TABLE, VIEW, SYNONYM] for schema 'SYSCAT'
+[25 IV 2011 18:32:44] Retrieving [TABLE, VIEW, SYNONYM] for schema 'SYSCS_DIAG'
+[25 IV 2011 18:32:44] Retrieving [TABLE, VIEW, SYNONYM] for schema 'SYSCS_UTIL'
+[25 IV 2011 18:32:44] Retrieving [TABLE, VIEW, SYNONYM] for schema 'SYSFUN'
+[25 IV 2011 18:32:44] Retrieving [TABLE, VIEW, SYNONYM] for schema 'SYSPROC'
+[25 IV 2011 18:32:44] Retrieving [TABLE, VIEW, SYNONYM] for schema 'SYSSTAT'
+[25 IV 2011 18:32:44] Retrieving columns for 'ACCOUNT' [type = TABLE]
+[25 IV 2011 18:32:44]   Found column: OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: ADDRESSLINE1 [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: ADDRESSLINE2 [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: CITY [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: COUNTRY [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: ZIP [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: PHONE [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: COMPANYNAME [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: USER_OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 IV 2011 18:32:44] Retrieving primary keys for 'ACCOUNT' [type = TABLE]
+[25 IV 2011 18:32:44]   Found primary key column: OID
+[25 IV 2011 18:32:44] Retrieving columns for 'EVENT' [type = TABLE]
+[25 IV 2011 18:32:44]   Found column: OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: NAME [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: DATE [type = DATE][SQL/XOPEN type = 91][size = 10][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: LOCATION [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: USER_OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 IV 2011 18:32:44] Retrieving primary keys for 'EVENT' [type = TABLE]
+[25 IV 2011 18:32:44]   Found primary key column: OID
+[25 IV 2011 18:32:44] Retrieving columns for 'GROUP' [type = TABLE]
+[25 IV 2011 18:32:44]   Found column: OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: GROUPNAME [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: MODULE_OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 IV 2011 18:32:44] Retrieving primary keys for 'GROUP' [type = TABLE]
+[25 IV 2011 18:32:44]   Found primary key column: OID
+[25 IV 2011 18:32:44] Retrieving columns for 'GROUP_MODULE' [type = TABLE]
+[25 IV 2011 18:32:44]   Found column: GROUP_OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: MODULE_OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 IV 2011 18:32:44] Retrieving primary keys for 'GROUP_MODULE' [type = TABLE]
+[25 IV 2011 18:32:44]   Found primary key column: GROUP_OID
+[25 IV 2011 18:32:44]   Found primary key column: MODULE_OID
+[25 IV 2011 18:32:44] Retrieving columns for 'GUESTLIST' [type = TABLE]
+[25 IV 2011 18:32:44]   Found column: OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: NAME [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: EVENT_OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 IV 2011 18:32:44] Retrieving primary keys for 'GUESTLIST' [type = TABLE]
+[25 IV 2011 18:32:44]   Found primary key column: OID
+[25 IV 2011 18:32:44] Retrieving columns for 'INVITATION' [type = TABLE]
+[25 IV 2011 18:32:44]   Found column: OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: FIRSTNAME [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: LASTNAME [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: NOTE [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: ISCHECKEDIN [type = SMALLINT][SQL/XOPEN type = 5][size = 5][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: CHECKINDATE [type = DATE][SQL/XOPEN type = 91][size = 10][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: ACCOMPANIEDBY [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: GUESTLIST_OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 IV 2011 18:32:44] Retrieving primary keys for 'INVITATION' [type = TABLE]
+[25 IV 2011 18:32:44]   Found primary key column: OID
+[25 IV 2011 18:32:44] Retrieving columns for 'MODULE' [type = TABLE]
+[25 IV 2011 18:32:44]   Found column: OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: MODULEID [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: MODULENAME [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 IV 2011 18:32:44] Retrieving primary keys for 'MODULE' [type = TABLE]
+[25 IV 2011 18:32:44]   Found primary key column: OID
+[25 IV 2011 18:32:44] Retrieving columns for 'PERMANENTGUESTLIST' [type = TABLE]
+[25 IV 2011 18:32:44]   Found column: OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: NAME [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: USER_OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 IV 2011 18:32:44] Retrieving primary keys for 'PERMANENTGUESTLIST' [type = TABLE]
+[25 IV 2011 18:32:44]   Found primary key column: OID
+[25 IV 2011 18:32:44] Retrieving columns for 'PERMANENTINVITATION' [type = TABLE]
+[25 IV 2011 18:32:44]   Found column: OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: FIRSTNAME [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: LASTNAME [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: NOTE [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: ISCHECKEDIN [type = SMALLINT][SQL/XOPEN type = 5][size = 5][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: CHECKINDATE [type = DATE][SQL/XOPEN type = 91][size = 10][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: ACCOMPANIEDBY [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: PERMANENTGUESTLIST_OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 IV 2011 18:32:44] Retrieving primary keys for 'PERMANENTINVITATION' [type = TABLE]
+[25 IV 2011 18:32:44]   Found primary key column: OID
+[25 IV 2011 18:32:44] Retrieving columns for 'SETTINGS' [type = TABLE]
+[25 IV 2011 18:32:44]   Found column: OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: LANGUAGE [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: ACCOUNT_OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 IV 2011 18:32:44] Retrieving primary keys for 'SETTINGS' [type = TABLE]
+[25 IV 2011 18:32:44]   Found primary key column: OID
+[25 IV 2011 18:32:44] Retrieving columns for 'USER' [type = TABLE]
+[25 IV 2011 18:32:44]   Found column: OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: USERNAME [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: PASSWORD [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: EMAIL [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: GROUP_OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: ATTRIBUTE1 [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 IV 2011 18:32:44] Retrieving primary keys for 'USER' [type = TABLE]
+[25 IV 2011 18:32:44]   Found primary key column: OID
+[25 IV 2011 18:32:44] Retrieving columns for 'USER_GROUP' [type = TABLE]
+[25 IV 2011 18:32:44]   Found column: USER_OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 IV 2011 18:32:44]   Found column: GROUP_OID [type = INTEGER][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 IV 2011 18:32:44] Retrieving primary keys for 'USER_GROUP' [type = TABLE]
+[25 IV 2011 18:32:44]   Found primary key column: USER_OID
+[25 IV 2011 18:32:44]   Found primary key column: GROUP_OID
+[25 IV 2011 18:32:44] Retrieving foreign keys for 'ACCOUNT' [type = TABLE]
+[25 IV 2011 18:32:45]   Found foreign key: column USER_OID references USER(OID)
+[25 IV 2011 18:32:45] Retrieving foreign keys for 'EVENT' [type = TABLE]
+[25 IV 2011 18:32:45]   Found foreign key: column USER_OID references USER(OID)
+[25 IV 2011 18:32:45] Retrieving foreign keys for 'GROUP' [type = TABLE]
+[25 IV 2011 18:32:45]   Found foreign key: column MODULE_OID references MODULE(OID)
+[25 IV 2011 18:32:45] Retrieving foreign keys for 'GROUP_MODULE' [type = TABLE]
+[25 IV 2011 18:32:45]   Found foreign key: column GROUP_OID references GROUP(OID)
+[25 IV 2011 18:32:45]   Found foreign key: column MODULE_OID references MODULE(OID)
+[25 IV 2011 18:32:45] Retrieving foreign keys for 'GUESTLIST' [type = TABLE]
+[25 IV 2011 18:32:45]   Found foreign key: column EVENT_OID references EVENT(OID)
+[25 IV 2011 18:32:45] Retrieving foreign keys for 'INVITATION' [type = TABLE]
+[25 IV 2011 18:32:45]   Found foreign key: column GUESTLIST_OID references GUESTLIST(OID)
+[25 IV 2011 18:32:45] Retrieving foreign keys for 'MODULE' [type = TABLE]
+[25 IV 2011 18:32:45] Retrieving foreign keys for 'PERMANENTGUESTLIST' [type = TABLE]
+[25 IV 2011 18:32:45]   Found foreign key: column USER_OID references USER(OID)
+[25 IV 2011 18:32:45] Retrieving foreign keys for 'PERMANENTINVITATION' [type = TABLE]
+[25 IV 2011 18:32:45]   Found foreign key: column PERMANENTGUESTLIST_OID references PERMANENTGUESTLIST(OID)
+[25 IV 2011 18:32:45] Retrieving foreign keys for 'SETTINGS' [type = TABLE]
+[25 IV 2011 18:32:45]   Found foreign key: column ACCOUNT_OID references ACCOUNT(OID)
+[25 IV 2011 18:32:45] Retrieving foreign keys for 'USER' [type = TABLE]
+[25 IV 2011 18:32:45]   Found foreign key: column GROUP_OID references GROUP(OID)
+[25 IV 2011 18:32:45] Retrieving foreign keys for 'USER_GROUP' [type = TABLE]
+[25 IV 2011 18:32:45]   Found foreign key: column GROUP_OID references GROUP(OID)
+[25 IV 2011 18:32:45]   Found foreign key: column USER_OID references USER(OID)
+[25 IV 2011 18:32:45] Database connection closed

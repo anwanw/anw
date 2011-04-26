@@ -1,0 +1,45 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="32" gr:y="25" id="sv1#page3" name="Home">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#page3#mssu2" name="Multi Message Unit2" linkOrder="sv1#page3#mssu2#ln4">
+      <Message xml:space="preserve">Ahoj&#237;q, w&#237;tejte na th&#233;to straance</Message>
+      <Link id="sv1#page3#mssu2#ln4" name="Registrace" to="sv1#page4" automaticCoupling="true" type="normal" validate="true"/>
+    </MultiMessageUnit>
+    <EntryUnit gr:x="0" gr:y="67" id="sv1#page3#enu2" name="login" linkOrder="sv1#page3#enu2#ln1">
+      <Field id="sv1#page3#enu2#fld3" name="username" type="string" modifiable="true"/>
+      <Field id="sv1#page3#enu2#fld4" name="password" type="password" modifiable="true"/>
+      <Link id="sv1#page3#enu2#ln1" name="Login" to="sv1#lgu2" type="normal" validate="true">
+        <LinkParameter id="sv1#page3#enu2#ln1#par1" name="username_Username" source="sv1#page3#enu2#fld3" target="sv1#lgu2.username"/>
+        <LinkParameter id="sv1#page3#enu2#ln1#par2" name="password_Password" source="sv1#page3#enu2#fld4" target="sv1#lgu2.password"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv1#page3#mssu2">
+          <layout:Link link="sv1#page3#mssu2#ln4"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv1#page3#enu2">
+          <layout:Field field="sv1#page3#enu2#fld3"/>
+          <layout:Field field="sv1#page3#enu2#fld4"/>
+          <layout:Link link="sv1#page3#enu2#ln1"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Variable id="sv1#page3#var1" name="username" type="string" unitId="sv1#page3#mssu2"/>
+  <Variable id="sv1#page3#var2" name="password" type="string" unitId="sv1#page3#mssu2"/>
+</Page>

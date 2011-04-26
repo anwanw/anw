@@ -1,0 +1,17 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="GuestlistManagementSystem" homePage="sv1#page3">
+  <OperationUnits>
+    <LoginUnit gr:x="247" gr:y="113" id="sv1#lgu2" name="LoginUnit2">
+      <OKLink id="sv1#lgu2#oln2" name="OKLink2" to="sv1#page1" automaticCoupling="true"/>
+      <KOLink id="sv1#lgu2#kln4" name="KOLink4" to="sv1#page3" automaticCoupling="true"/>
+    </LoginUnit>
+    <CreateUnit gr:x="214" gr:y="306" id="sv1#cru1" name="Registration" entity="User">
+      <OKLink id="sv1#cru1#oln3" name="OKLink3" to="sv1#page3" automaticCoupling="true"/>
+    </CreateUnit>
+    <CreateUnit gr:x="527" gr:y="317" id="sv1#cru2" name="CreateEvent" entity="ent3">
+      <OKLink id="sv1#cru2#oln6" name="OKLink6" to="sv1#page1" automaticCoupling="true"/>
+    </CreateUnit>
+    <GetUnit gr:x="360" gr:y="319" id="sv1#gtu2" name="GetUnit2" contextParameters="UserCtxParam" linkOrder="sv1#gtu2#ln7">
+      <Link id="sv1#gtu2#ln7" name="Link7" to="sv1#cru2" automaticCoupling="true" type="transport" validate="true"/>
+    </GetUnit>
+  </OperationUnits>
+</SiteView>

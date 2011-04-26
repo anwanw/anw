@@ -1,0 +1,36 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page7" name="Page 7" gr:x="759" gr:y="20">
+  <ContentUnits>
+    <DataUnit id="sv1#page7#dau2" name="Event Detail" gr:x="33" gr:y="19" entity="ent3" displayAttributes="ent3#att15 ent3#att16 ent3#att17" linkOrder="sv1#page7#dau2#ln29">
+      <Selector id="sv1#page7#dau2#su6" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#page7#dau2#su6#kcond5" name="KeyCondition3" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv1#page7#dau2#ln29" name="Link29" to="sv1#page6#enu3" type="normal" validate="true">
+        <LinkParameter id="sv1#page7#dau2#ln29#par15" name="EventToUser.oid_var4" source="data.rel8#role15_userOID" targetVariable="sv1#page6#var4"/>
+      </Link>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv1#page7#dau2">
+          <layout:Attribute attribute="ent3#att15"/>
+          <layout:Attribute attribute="ent3#att16"/>
+          <layout:Attribute attribute="ent3#att17"/>
+          <layout:Link link="sv1#page7#dau2#ln29"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

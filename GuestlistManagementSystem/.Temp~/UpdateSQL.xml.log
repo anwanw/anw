@@ -1,0 +1,26 @@
+[25 IV 2011 18:30:40] DEBUG Executing SQL script
+[25 IV 2011 18:30:40] INFO ================================================================================
+[25 IV 2011 18:30:40] INFO outputPath= 'C:\Documents and Settings\ubuntak\Plocha\gg\GuestlistManagementSystem\.Temp~\UpdateSQL.xml'
+[25 IV 2011 18:30:40] INFO onError= 'continue'
+[25 IV 2011 18:30:40] INFO statementSeparator= ';'
+[25 IV 2011 18:30:40] INFO derby.system.home= 'C:\Documents and Settings\ubuntak\Plocha\gg\.metadata\.plugins\com.webratio.commons.db\derby'
+[25 IV 2011 18:30:40] INFO password= 'user'
+[25 IV 2011 18:30:40] INFO url= 'jdbc:derby://localhost:1527/Test2;create=true'
+[25 IV 2011 18:30:40] INFO username= 'user'
+[25 IV 2011 18:30:40] INFO autoCommit= 'false'
+[25 IV 2011 18:30:40] INFO outputLogPath= 'C:\Documents and Settings\ubuntak\Plocha\gg\GuestlistManagementSystem\.Temp~\UpdateSQL.xml.log'
+[25 IV 2011 18:30:40] INFO driverClass= 'org.apache.derby.jdbc.ClientDriver'
+[25 IV 2011 18:30:40] INFO encoding= ''
+[25 IV 2011 18:30:40] INFO eventSocketPort= '1532'
+[25 IV 2011 18:30:40] INFO sqlScript= 'C:\Documents and Settings\ubuntak\Plocha\gg\GuestlistManagementSystem\.Temp~\UpdateSQL.sql'
+[25 IV 2011 18:30:40] INFO ================================================================================
+[25 IV 2011 18:30:40] INFO Connecting to the Database...
+[25 IV 2011 18:30:41] INFO Database connection estabilished
+[25 IV 2011 18:30:42] INFO transaction isolation: 2
+[25 IV 2011 18:30:42] DEBUG ================================================================================
+[25 IV 2011 18:30:42] DEBUG Executing SQL script file: C:\Documents and Settings\ubuntak\Plocha\gg\GuestlistManagementSystem\.Temp~\UpdateSQL.sql
+[25 IV 2011 18:30:42] DEBUG Executing statement:  alter table "APP"."USER"  ADD COLUMN  "ATTRIBUTE1"  varchar(255)
+[25 IV 2011 18:30:42] DEBUG ================================================================================
+[25 IV 2011 18:30:42] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[25 IV 2011 18:30:42] INFO Database connection closed
+[25 IV 2011 18:30:42] DEBUG Total time: 2814 milliseconds

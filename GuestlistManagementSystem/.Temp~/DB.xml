@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DBMetaData driverMajorVersion="10" driverMinorVersion="4" driverVersion="10.4.2.0 - (689064)" productVersion="10.4.2.0 - (689064)" identifierQuoteString="&quot;" transactionLevel="Read Committed" driverName="Apache Derby Network Client JDBC Driver" productName="Apache Derby">
+  <Schema name="APP"/>
+  <Schema name="NULLID"/>
+  <Schema name="SQLJ"/>
+  <Schema name="SYSCAT"/>
+  <Schema name="SYSCS_DIAG"/>
+  <Schema name="SYSCS_UTIL"/>
+  <Schema name="SYSFUN"/>
+  <Schema name="SYSPROC"/>
+  <Schema name="SYSSTAT"/>
+  <Table schema="APP" name="ACCOUNT" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="ADDRESSLINE1" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="ADDRESSLINE2" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="CITY" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="COUNTRY" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="ZIP" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="PHONE" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="COMPANYNAME" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="USER_OID" primaryKey="false" notNull="false"/>
+    <ForeignKey localColumnName="USER_OID" foreignColumnName="OID" name="FK_USER" foreignTableName="USER" foreignSchemaName="APP"/>
+  </Table>
+  <Table schema="APP" name="EVENT" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="NAME" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="91" indexed="unknown" autoIncrement="false" type="DATE" size="10" decimalDigits="0" name="DATE" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="LOCATION" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="USER_OID" primaryKey="false" notNull="false"/>
+    <ForeignKey localColumnName="USER_OID" foreignColumnName="OID" name="FK_USER_2" foreignTableName="USER" foreignSchemaName="APP"/>
+  </Table>
+  <Table schema="APP" name="GROUP" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="GROUPNAME" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="MODULE_OID" primaryKey="false" notNull="false"/>
+    <ForeignKey localColumnName="MODULE_OID" foreignColumnName="OID" name="FK_MODULE" foreignTableName="MODULE" foreignSchemaName="APP"/>
+  </Table>
+  <Table schema="APP" name="GROUP_MODULE" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="GROUP_OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="MODULE_OID" primaryKey="true" notNull="true"/>
+    <ForeignKey localColumnName="GROUP_OID" foreignColumnName="OID" name="FK_GROUP_MODULE_GROUP" foreignTableName="GROUP" foreignSchemaName="APP"/>
+    <ForeignKey localColumnName="MODULE_OID" foreignColumnName="OID" name="FK_GROUP_MODULE_MODULE" foreignTableName="MODULE" foreignSchemaName="APP"/>
+  </Table>
+  <Table schema="APP" name="GUESTLIST" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="NAME" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="EVENT_OID" primaryKey="false" notNull="false"/>
+    <ForeignKey localColumnName="EVENT_OID" foreignColumnName="OID" name="FK_EVENT" foreignTableName="EVENT" foreignSchemaName="APP"/>
+  </Table>
+  <Table schema="APP" name="INVITATION" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="FIRSTNAME" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="LASTNAME" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="NOTE" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="5" indexed="unknown" autoIncrement="false" type="SMALLINT" size="5" decimalDigits="0" name="ISCHECKEDIN" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="91" indexed="unknown" autoIncrement="false" type="DATE" size="10" decimalDigits="0" name="CHECKINDATE" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="ACCOMPANIEDBY" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="GUESTLIST_OID" primaryKey="false" notNull="false"/>
+    <ForeignKey localColumnName="GUESTLIST_OID" foreignColumnName="OID" name="FK_GUESTLIST" foreignTableName="GUESTLIST" foreignSchemaName="APP"/>
+  </Table>
+  <Table schema="APP" name="MODULE" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="MODULEID" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="MODULENAME" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="APP" name="PERMANENTGUESTLIST" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="NAME" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="USER_OID" primaryKey="false" notNull="false"/>
+    <ForeignKey localColumnName="USER_OID" foreignColumnName="OID" name="FK_USER_3" foreignTableName="USER" foreignSchemaName="APP"/>
+  </Table>
+  <Table schema="APP" name="PERMANENTINVITATION" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="FIRSTNAME" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="LASTNAME" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="NOTE" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="5" indexed="unknown" autoIncrement="false" type="SMALLINT" size="5" decimalDigits="0" name="ISCHECKEDIN" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="91" indexed="unknown" autoIncrement="false" type="DATE" size="10" decimalDigits="0" name="CHECKINDATE" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="ACCOMPANIEDBY" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="PERMANENTGUESTLIST_OID" primaryKey="false" notNull="false"/>
+    <ForeignKey localColumnName="PERMANENTGUESTLIST_OID" foreignColumnName="OID" name="FK_PERMANENTGUESTLIST" foreignTableName="PERMANENTGUESTLIST" foreignSchemaName="APP"/>
+  </Table>
+  <Table schema="APP" name="SETTINGS" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="LANGUAGE" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="ACCOUNT_OID" primaryKey="false" notNull="false"/>
+    <ForeignKey localColumnName="ACCOUNT_OID" foreignColumnName="OID" name="FK_ACCOUNT" foreignTableName="ACCOUNT" foreignSchemaName="APP"/>
+  </Table>
+  <Table schema="APP" name="USER" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="USERNAME" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="PASSWORD" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="EMAIL" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="GROUP_OID" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="ATTRIBUTE1" primaryKey="false" notNull="false"/>
+    <ForeignKey localColumnName="GROUP_OID" foreignColumnName="OID" name="FK_GROUP" foreignTableName="GROUP" foreignSchemaName="APP"/>
+  </Table>
+  <Table schema="APP" name="USER_GROUP" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="USER_OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INTEGER" size="10" decimalDigits="0" name="GROUP_OID" primaryKey="true" notNull="true"/>
+    <ForeignKey localColumnName="GROUP_OID" foreignColumnName="OID" name="FK_USER_GROUP_GROUP" foreignTableName="GROUP" foreignSchemaName="APP"/>
+    <ForeignKey localColumnName="USER_OID" foreignColumnName="OID" name="FK_USER_GROUP_USER" foreignTableName="USER" foreignSchemaName="APP"/>
+  </Table>
+</DBMetaData>
