@@ -108,3 +108,15 @@ Command-line arguments:  -os win32 -ws win32 -arch x86
 
 !ENTRY org.eclipse.equinox.p2.ui.sdk 2 0 2011-04-26 12:50:35.112
 !MESSAGE Could not locate the running profile instance. The eclipse.p2.data.area and eclipse.p2.profile properties may not be set correctly in this application's config.ini file.
+!SESSION 2011-04-26 22:20:36.661 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=cs_CZ
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.core.resources 2 10035 2011-04-26 22:21:03.389
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.equinox.p2.ui.sdk 2 0 2011-04-26 22:21:41.313
+!MESSAGE Could not locate the running profile instance. The eclipse.p2.data.area and eclipse.p2.profile properties may not be set correctly in this application's config.ini file.

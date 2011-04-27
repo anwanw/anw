@@ -1,11 +1,24 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page7" name="Page 7" gr:x="791" gr:y="39">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page7" name="EventDetail" gr:x="716" gr:y="25">
   <ContentUnits>
-    <DataUnit id="sv1#page7#dau2" name="Event Detail" gr:x="1" gr:y="0" entity="ent3" displayAttributes="ent3#att15 ent3#att16 ent3#att17">
+    <DataUnit id="sv1#page7#dau2" name="Event Detail" gr:x="88" gr:y="0" entity="ent3" displayAttributes="ent3#att15 ent3#att16 ent3#att17" linkOrder="sv1#page7#dau2#ln6">
       <Selector id="sv1#page7#dau2#su6" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#page7#dau2#su6#kcond5" name="KeyCondition3" predicate="in" implied="false"/>
       </Selector>
+      <Link id="sv1#page7#dau2#ln6" name="Link6" to="sv1#page8#enu5" type="normal" validate="true">
+        <LinkParameter id="sv1#page7#dau2#ln6#par8" name="oid_PASSING" source="data.ent3#att12" passing="true"/>
+      </Link>
     </DataUnit>
-    <IndexUnit gr:x="0" gr:y="100" id="sv1#page7#inu2" name="IndexUnit2" entity="ent5"/>
+    <IndexUnit gr:x="100" gr:y="125" id="sv1#page7#inu2" name="List of guestslists" entity="ent4" linkOrder="sv1#page7#inu2#ln11" displayAttributes="ent4#att18">
+      <Link id="sv1#page7#inu2#ln11" name="Link11" to="sv1#page9#dau1" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv1#page7#inu2#ln29" name="Link29" to="sv1#page7#dau2" type="transport" validate="true">
+        <LinkParameter id="sv1#page7#inu2#ln29#par34" name="oid_KeyCondition3 [oid]" source="data[].ent4#att13" target="sv1#page7#dau2#su6#kcond5.ent3#att12"/>
+      </Link>
+      <Selector id="sv1#page7#inu2#su7" defaultPolicy="fill" booleanOperator="and"/>
+    </IndexUnit>
+    <SelectorUnit gr:x="0" gr:y="119" id="sv1#page7#seu5" name="SelectorUnit5">
+      <Link id="sv1#page7#seu5#ln33" name="Link33" to="sv1#page7#dau2" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv1#page7#seu5#ln34" name="Link34" to="sv1#page7#inu2" automaticCoupling="true" type="transport" validate="true"/>
+    </SelectorUnit>
   </ContentUnits>
   <layout:Grid>
     <layout:Row>
@@ -14,10 +27,14 @@
           <layout:Attribute attribute="ent3#att15"/>
           <layout:Attribute attribute="ent3#att16"/>
           <layout:Attribute attribute="ent3#att17"/>
+          <layout:Link link="sv1#page7#dau2#ln6"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell>
-        <layout:Unit unitId="sv1#page7#inu2"/>
+        <layout:Unit unitId="sv1#page7#inu2">
+          <layout:Attribute attribute="ent4#att18"/>
+          <layout:Link link="sv1#page7#inu2#ln11"/>
+        </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
     </layout:Row>
@@ -32,4 +49,5 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
+  <Variable id="sv1#page7#var3" name="var3"/>
 </Page>

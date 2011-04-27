@@ -13,8 +13,23 @@
     <GetUnit gr:x="360" gr:y="319" id="sv1#gtu2" name="GetUnit2" contextParameters="UserCtxParam" linkOrder="sv1#gtu2#ln7">
       <Link id="sv1#gtu2#ln7" name="Link7" to="sv1#cru2" automaticCoupling="true" type="transport" validate="true"/>
     </GetUnit>
-    <CreateUnit gr:x="1041" gr:y="266" id="sv1#cru5" name="CreateUnit5" entity="ent5">
+    <CreateUnit gr:x="784" gr:y="288" id="sv1#cru5" name="CreateInvitation" entity="ent5">
       <KOLink id="sv1#cru5#kln1" name="KOLink1" to="sv1#page5" automaticCoupling="true"/>
     </CreateUnit>
+    <CreateUnit gr:x="983" gr:y="216" id="sv1#cru3" name="CreateUnit3" entity="ent4" linkOrder="sv1#cru3#ln31">
+      <KOLink id="sv1#cru3#kln2" name="KOLink2" to="sv1#page5" automaticCoupling="true"/>
+      <Link id="sv1#cru3#ln31" name="Link31" to="sv1#cnu1" type="transport" validate="true">
+        <LinkParameter id="sv1#cru3#ln31#par35" name="oid_KeyCondition4 [oid] [Guestlist] [Target]" source="ent4#att13Array" target="sv1#cnu1#su5#kcond4.ent4#att13"/>
+        <LinkParameter id="sv1#cru3#ln31#par37" name="oid_PASSING_KeyCondition3 [oid] [Event] [Source]" sourceLinkParameter="sv1#page8#enu5#ln10#par36" target="sv1#cnu1#su4#kcond3.ent3#att12"/>
+      </Link>
+    </CreateUnit>
+    <ConnectUnit gr:x="453" gr:y="411" id="sv1#cnu1" name="ConnectUnit1" relationship="rel4#role7">
+      <SourceSelector id="sv1#cnu1#su4" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#cnu1#su4#kcond3" name="KeyCondition3" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv1#cnu1#su5" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#cnu1#su5#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
+      </TargetSelector>
+    </ConnectUnit>
   </OperationUnits>
 </SiteView>
